@@ -3,8 +3,12 @@
 #include <stdlib.h>
 
 int main(){
+   
+FILE *fd = fopen("numbers2","r");
 
+int lines = 3004
 char line[10];
+int arr[lines];
 
    int ind = 0;
    int num;
