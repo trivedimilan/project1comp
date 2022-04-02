@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//right now the length of the file is hardcoded, I will fix it later so that it can accept input of any size
 int main(){
    
 FILE *fd = fopen("numbers2","r");
