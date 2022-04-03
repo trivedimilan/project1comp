@@ -4,6 +4,8 @@
 
 int main(){
    
+printf("Hi I’m process 1");
+   
 FILE *fd = fopen("numbers2","r");
 
 int lines;
@@ -38,13 +40,14 @@ char line[10];
 
    avg = sum/lines;
 
-   printf("The average is %d\n", avg);
+   printf("Average = %d\n", avg);
+   printf("Max = %d\n", max);
 
    int foundmax = 0;
    int maxind;
    for(int i = 0; i < lines; i++){
         if(arr[i] == -1){
-                printf("Hidden key has been found in line %d\n",i+1);
+                printf("Hi I am process 1 and I found the hidden key in position A[%d].\n",i);
                 continue;
         }
         if(arr[i] == max){
