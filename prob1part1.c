@@ -1,15 +1,19 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
-//right now the length of the file is hardcoded, I will fix it later so that it can accept input of any size
+
 int main(){
    
 FILE *fd = fopen("numbers2","r");
 
-int lines = 3004
+int lines;
+printf("Please enter the amount of integers in the txt file: ");
+scanf("%d", &lines);
+int *arr = (int*)malloc(lines * sizeof(int));
+
+
 char line[10];
-int arr[lines];
+//int arr[3000];
 
    int ind = 0;
    int num;
@@ -29,7 +33,7 @@ int arr[lines];
         arr[ind] = num;
         ind++;
 
-         printf("%s\n",line);
+        //printf("%d\n",num);
    }
 
    avg = sum/lines;
@@ -40,10 +44,10 @@ int arr[lines];
    int maxind;
    for(int i = 0; i < lines; i++){
         if(arr[i] == -1){
-                printf("Hidden key has been found in line %d\n",i);
+                printf("Hidden key has been found in line %d\n",i+1);
                 continue;
         }
-        if(arr[i] = max){
+        if(arr[i] == max){
                 if(foundmax){
                         continue;
                 }
@@ -58,8 +62,9 @@ int arr[lines];
 
 
    }
-printf("First instance of max number found at %d\n",maxind);
-
+printf("First instance of max number found at %d\n",maxind+1);
+printf("Please note the positions for each integer starts at 1 and not 0");
 
     return 0;
 }
+
