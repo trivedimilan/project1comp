@@ -4,9 +4,10 @@
 
 int main(){
    
-printf("Hi I’m process 1");
-   
 FILE *fd = fopen("numbers2","r");
+FILE *fc = fopen("output.txt","w");
+
+fprintf(fc,"Hi im process 1\n");
 
 int lines;
 printf("Please enter the amount of integers in the txt file: ");
@@ -40,14 +41,14 @@ char line[10];
 
    avg = sum/lines;
 
-   printf("Average = %d\n", avg);
-   printf("Max = %d\n", max);
+   fprintf(fc,"Average = %d\n", avg);
+   fprintf(fc,"Max = %d\n", max);
 
    int foundmax = 0;
    int maxind;
    for(int i = 0; i < lines; i++){
         if(arr[i] == -1){
-                printf("Hi I am process 1 and I found the hidden key in position A[%d].\n",i);
+                fprintf(fc,"Hi I am process 1 and I found the hidden key in position A[%d].\n",i);
                 continue;
         }
         if(arr[i] == max){
@@ -65,9 +66,8 @@ char line[10];
 
 
    }
-printf("First instance of max number found at %d\n",maxind+1);
-printf("Please note the positions for each integer starts at 1 and not 0");
+fprintf(fc,"First instance of max number found at %d\n",maxind);
+//fprintf(fc,"Please note the positions for each integer starts at 1 and not 0");
 
     return 0;
 }
-
