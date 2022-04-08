@@ -1,0 +1,9 @@
+Hi im process 1
+Average = 0
+Max = 1000
+Hi I am process 1 and I found the hidden key in position A[158].
+Hi I am process 1 and I found the hidden key in position A[1025].
+Hi I am process 1 and I found the hidden key in position A[1367].
+Hi I am process 1 and I found the hidden key in position A[1736].
+Hi I am process 1 and I found the hidden key in position A[2358].
+First instance of max number found at 183
